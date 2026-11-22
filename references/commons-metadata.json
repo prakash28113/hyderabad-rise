@@ -1,0 +1,206 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "normalized": [
+      {
+        "from": "File:Charminar_of_Hyderabad_Telangana.jpg",
+        "to": "File:Charminar of Hyderabad Telangana.jpg"
+      },
+      {
+        "from": "File:Charminar_-_Hyderabad,_Telangana,_India.jpg",
+        "to": "File:Charminar - Hyderabad, Telangana, India.jpg"
+      }
+    ],
+    "pages": {
+      "122672123": {
+        "pageid": 122672123,
+        "ns": 6,
+        "title": "File:Charminar - Hyderabad, Telangana, India.jpg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Charminar_-_Hyderabad%2C_Telangana%2C_India.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Charminar_-_Hyderabad,_Telangana,_India.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/wiki/Special:Redirect/page/122672123",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2022-09-05 09:31:50",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "Charminar - Hyderabad, Telangana, India",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "2020 in Hyderabad, India|Self-published work|Minarets of Charminar|India photographs taken on 2020-01-16|January 2020 in Telangana",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "The monument which everyone knows, just a different view of the same!",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2020-01-16 11:24:18",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:S_K_Zahid_Basha&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:S K Zahid Basha (page does not exist)\">S K Zahid Basha</a>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 4.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-Share Alike 4.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-sa-4.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ]
+      },
+      "153362333": {
+        "pageid": 153362333,
+        "ns": 6,
+        "title": "File:Charminar of Hyderabad Telangana.jpg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Charminar_of_Hyderabad_Telangana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Charminar_of_Hyderabad_Telangana.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/wiki/Special:Redirect/page/153362333",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2024-09-30 07:40:03",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "Charminar of Hyderabad Telangana",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "Self-published work|Images from Wiki Loves Monuments 2024|Indian monuments with Wikidata QIDs|Files with coordinates missing SDC location of creation|Images from Wiki Loves Monuments missing SDC depicts|Images from Wiki Loves Monuments missing SDC location of creation|Files from competitions organized by West Bengal Wikimedians User Group|Uploaded via Campaign:wlm-in-tg|Images from Wiki Loves Monuments 2024 in India|Images from WLM 2024 India under review by Montage tool|Remote views of Charminar",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "GPSLatitude": {
+                "value": "17.361607",
+                "source": "commons-desc-page"
+              },
+              "GPSLongitude": {
+                "value": "78.474657",
+                "source": "commons-desc-page"
+              },
+              "GPSMapDatum": {
+                "value": "WGS-84",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "The Charminar, a majestic monument in Hyderabad, Telangana, is an iconic symbol of Indian history and architecture. Built in 1591 by Sultan Mohammed Quli Qutb Shah, this stunning structure combines Islamic, Hindu, and Persian styles, featuring four towering minarets, intricate carvings, and a grand mosque. The Charminar's beauty is enhanced by its surroundings, including the bustling Laad Bazaar and the scenic Hussain Sagar Lake. This UNESCO World Heritage Site attracts millions of visitors, offering a glimpse into the region's rich cultural heritage and the city's vibrant past, making it a must-visit destination in India.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2024-06-26 18:31:59",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Kdas1977&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Kdas1977 (page does not exist)\">Kdas1977</a>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 4.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-Share Alike 4.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-sa-4.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

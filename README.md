@@ -11,9 +11,12 @@ python3 -m unittest discover -s tests -v
 godot --headless --path godot --script res://scripts/validate.gd
 ```
 
-Debug APK: `build/hyderabad-debug.apk` (separately supplied). Android 7.0+ ARM64; target SDK 36. Device install/launch remains untested.
+Debug APK: `build/hyderabad-v0.1.5-debug.apk` (separately supplied). Android 7.0+ ARM64; target SDK 36. Device install/launch remains untested.
 
-See docs/GEOGRAPHY.md, docs/QA.md, docs/LICENSE_REGISTER.md and docs/BACKLOG.md. Local branch: dev/sprint1-geographic-foundation. Remote creation/push pending owner/repository approval. No merge, deployment or publishing performed.
+See docs/GEOGRAPHY.md, docs/QA.md, docs/LICENSE_REGISTER.md and docs/BACKLOG.md. Local branch: dev/sprint1-geographic-foundation. Existing private remote `prakash28113/hyderabad-rise` is approved; push is blocked by missing authenticated Git access. No merge, deployment or publishing performed.
 
 ## Verification follow-up v0.1.1
-Local branch `dev/sprint1-verification-fixes` fixes mesh fronts/normals, adds boundary recovery, 30 FPS cap, scoped performance logs, a physical-device collection tool and rendered desktop screenshots. See `docs/VERIFICATION_FOLLOWUP.md`. Original branch/commit preserved. Physical Android verification and recognizable Hyderabad art remain incomplete.
+Local branch `dev/sprint1-verification-fixes` fixes mesh fronts/normals, adds boundary recovery, 30 FPS cap, scoped performance logs, a physical-device collection tool and rendered desktop screenshots. See `docs/VERIFICATION_FOLLOWUP.md`. Original commit preserved by ancestry and tag `sprint1-original-3659f13`. Physical Android verification and recognizable Hyderabad art remain incomplete.
+
+## Sprint 1.5
+Original reference-informed Charminar LODs, Old City modules/props, a static auto-rickshaw, trilingual place-name signs, road/building batching and matched graphical evidence are included. See [Sprint 1.5 report](docs/SPRINT15_REPORT.md) for accuracy, licensing, actual desktop measurements and physical Android blockers. Full visual authenticity and the sustained Android 30 FPS milestone have not passed.

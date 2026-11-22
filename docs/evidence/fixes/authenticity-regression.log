@@ -1,0 +1,5 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+HYD_STREAM {"features":276,"sync_update_ms":126.538,"tile_x":0,"tile_z":0,"tiles":9}
+HYD_READY {"platform":"Linux","scene_ready_ms":321.552,"scope":"scene setup only; excludes Android activity startup"}
+PASS: source anchor/yaw, 48.7 m model parameter, decreasing LODs [38560, 22672, 10448], <=6 building surfaces, 720 road segment endpoints (CPU transforms on headless; renderer readback on desktop), open gateway and pier collision, instanced shop LODs and auto

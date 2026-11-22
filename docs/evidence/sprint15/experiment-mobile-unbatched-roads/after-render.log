@@ -1,0 +1,11 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+WARNING: Could not set V-Sync mode, as changing V-Sync mode is not supported by the graphics driver.
+     at: set_use_vsync (platform/linuxbsd/x11/gl_manager_x11.cpp:372)
+OpenGL API 4.5 (Core Profile) Mesa 25.0.7-2+deb13u1 - Compatibility - Using Device: Mesa - llvmpipe (LLVM 19.1.7, 256 bits)
+
+HYD_STREAM {"features":276,"sync_update_ms":188.727,"tile_x":0,"tile_z":0,"tiles":9}
+HYD_READY {"platform":"Linux","scene_ready_ms":583.026,"scope":"scene setup only; excludes Android activity startup"}
+HYD_PERF {"display_driver":"X11","engine_fps":23.0,"engine_static_bytes":93774538,"interval_ms_max":1510.991,"interval_ms_p50":33.319,"interval_ms_p95":40.296,"interval_ms_p99":303.797,"platform":"Linux","render_draw_calls":160.0,"render_primitives":40070.0,"render_video_bytes":37049962.0,"samples":136,"scope":"engine process callback intervals and engine allocation counter; not presented-frame GPU timings or Android PSS"}
+HYD_PERF {"display_driver":"X11","engine_fps":26.0,"engine_static_bytes":93782934,"interval_ms_max":355.567,"interval_ms_p50":33.332,"interval_ms_p95":34.207,"interval_ms_p99":48.725,"platform":"Linux","render_draw_calls":121.0,"render_primitives":32986.0,"render_video_bytes":37049962.0,"samples":143,"scope":"engine process callback intervals and engine allocation counter; not presented-frame GPU timings or Android PSS"}
+HYD_PERF {"display_driver":"X11","engine_fps":30.0,"engine_static_bytes":93815382,"interval_ms_max":287.163,"interval_ms_p50":33.338,"interval_ms_p95":36.191,"interval_ms_p99":48.567,"platform":"Linux","render_draw_calls":203.0,"render_primitives":42310.0,"render_video_bytes":37049962.0,"samples":144,"scope":"engine process callback intervals and engine allocation counter; not presented-frame GPU timings or Android PSS"}
+HYD_CAPTURE_DONE after 4 real rendered views

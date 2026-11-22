@@ -1,0 +1,19 @@
+{
+  "raw_json_sha256": "710252a9b396c0229cfbb757a4edac7e839dd0e94099c7cdadc8ba2f18abdfd9",
+  "anchor_local_m": [
+    -6.265406207989231,
+    -0.25725484707517576
+  ],
+  "rotation_clockwise_from_east_degrees": 11.088703764984508,
+  "commons_object_point_wgs84": [
+    17.361607,
+    78.474657
+  ],
+  "commons_point_vs_osm_centroid_distance_m": 1.7725972101849137,
+  "source": "Kdas1977 Commons file object-location metadata, CC0 structured data; not camera position",
+  "confidence": "Volunteered reference agreement only; no surveyed control point or absolute accuracy bound",
+  "qa_view_count": 4,
+  "model_height_parameter_m": 48.7,
+  "model_body_side_parameter_m": 20,
+  "widths_and_props": "Road width defaults, shop typologies and furniture are explicit art assumptions, not independently measured"
+}

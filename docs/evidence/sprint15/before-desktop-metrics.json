@@ -1,0 +1,142 @@
+[
+  {
+    "callback_interval_ms_max": 73.207,
+    "callback_interval_ms_p50": 33.334,
+    "callback_interval_ms_p95": 34.688,
+    "callback_interval_ms_p99": 54.778,
+    "callback_rate_hz": 29.8627458429813,
+    "display_driver": "X11",
+    "engine_static_bytes": 87844174,
+    "label": "before",
+    "last_frame_draw_calls": 225.0,
+    "last_frame_primitives": 3477.0,
+    "platform": "Linux",
+    "scope": "Desktop rendered session; engine callback intervals, not Android presented-frame timings or PSS",
+    "view": {
+      "fov_degrees": 60.0,
+      "look_at": [
+        -6.26540620798923,
+        21.5,
+        -0.257254847075176
+      ],
+      "name": "south",
+      "node_pair": [
+        2461280235.0,
+        2460389471.0
+      ],
+      "position": [
+        -22.96870769477,
+        1.7,
+        67.9039048636481
+      ],
+      "road_name": "Charminar Road",
+      "road_osm_id": 314683943.0,
+      "snap_distance_m": 3.28368602184565
+    }
+  },
+  {
+    "callback_interval_ms_max": 39.036,
+    "callback_interval_ms_p50": 33.331,
+    "callback_interval_ms_p95": 33.556,
+    "callback_interval_ms_p99": 34.755,
+    "callback_rate_hz": 30.0005900116036,
+    "display_driver": "X11",
+    "engine_static_bytes": 87943750,
+    "label": "before",
+    "last_frame_draw_calls": 354.0,
+    "last_frame_primitives": 5132.0,
+    "platform": "Linux",
+    "scope": "Desktop rendered session; engine callback intervals, not Android presented-frame timings or PSS",
+    "view": {
+      "fov_degrees": 60.0,
+      "look_at": [
+        -6.26540620798923,
+        21.5,
+        -0.257254847075176
+      ],
+      "name": "north",
+      "node_pair": [
+        3678640435.0,
+        2460435023.0
+      ],
+      "position": [
+        6.33113937282709,
+        1.7,
+        -69.1937169659749
+      ],
+      "road_name": "unnamed",
+      "road_osm_id": 363725545.0,
+      "snap_distance_m": 0.899965862110267
+    }
+  },
+  {
+    "callback_interval_ms_max": 37.008,
+    "callback_interval_ms_p50": 33.329,
+    "callback_interval_ms_p95": 33.603,
+    "callback_interval_ms_p99": 34.749,
+    "callback_rate_hz": 30.0009750316885,
+    "display_driver": "X11",
+    "engine_static_bytes": 87967386,
+    "label": "before",
+    "last_frame_draw_calls": 204.0,
+    "last_frame_primitives": 3262.0,
+    "platform": "Linux",
+    "scope": "Desktop rendered session; engine callback intervals, not Android presented-frame timings or PSS",
+    "view": {
+      "fov_degrees": 60.0,
+      "look_at": [
+        -6.26540620798923,
+        21.5,
+        -0.257254847075176
+      ],
+      "name": "east",
+      "node_pair": [
+        306593153.0,
+        306605403.0
+      ],
+      "position": [
+        63.2786445351612,
+        1.7,
+        8.79274587630194
+      ],
+      "road_name": "Bhagya laxmi mandir road",
+      "road_osm_id": 1104865563.0,
+      "snap_distance_m": 4.49428087604395
+    }
+  },
+  {
+    "callback_interval_ms_max": 38.996,
+    "callback_interval_ms_p50": 33.333,
+    "callback_interval_ms_p95": 33.56,
+    "callback_interval_ms_p99": 36.415,
+    "callback_rate_hz": 30.0002350018408,
+    "display_driver": "X11",
+    "engine_static_bytes": 88055270,
+    "label": "before",
+    "last_frame_draw_calls": 420.0,
+    "last_frame_primitives": 5886.0,
+    "platform": "Linux",
+    "scope": "Desktop rendered session; engine callback intervals, not Android presented-frame timings or PSS",
+    "view": {
+      "fov_degrees": 60.0,
+      "look_at": [
+        -6.26540620798923,
+        21.5,
+        -0.257254847075176
+      ],
+      "name": "west",
+      "node_pair": [
+        2460386356.0,
+        2460386342.0
+      ],
+      "position": [
+        -74.7860970067023,
+        1.7,
+        -14.7043012822653
+      ],
+      "road_name": "Purana Pul Road",
+      "road_osm_id": 238191970.0,
+      "snap_distance_m": 0.999048266156116
+    }
+  }
+]

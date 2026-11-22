@@ -1,0 +1,320 @@
+[
+  {
+    "file": "references/charminar-aerial-Kdas1977.jpg",
+    "author": "Kdas1977",
+    "source": "https://commons.wikimedia.org/wiki/File:Charminar_of_Hyderabad_Telangana.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "retrieved": "2026-11-22",
+    "sha256": "1a355b7ea57da762218ccd848499bcff3462dc2f76542989471162ed1b5c008b",
+    "use": "Visual research/comparison only; no photograph pixels used as game textures",
+    "modification": "Original downloaded photo unmodified"
+  },
+  {
+    "file": "references/charminar-street-Zahid.jpg",
+    "author": "S K Zahid Basha",
+    "source": "https://commons.wikimedia.org/wiki/File:Charminar_-_Hyderabad,_Telangana,_India.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "retrieved": "2026-11-22",
+    "sha256": "9d62eba6bb3a24f04b22118de95673013fd7d90ca090f5eb881403ae7c8d1cff",
+    "use": "Visual research/comparison only; no photograph pixels used as game textures",
+    "modification": "Original downloaded photo unmodified"
+  },
+  {
+    "file": "references/charminar-portal-Rashid.jpg",
+    "author": "Rashid Jorvee",
+    "source": "https://commons.wikimedia.org/wiki/File:Charminar_Arc_complete_view_of_other_gate.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "retrieved": "2026-11-22",
+    "sha256": "6a05f25e6de90aa40df881185866a460f44f11109902826584426c70f0db03df",
+    "use": "Visual research/comparison only; no photograph pixels used as game textures",
+    "modification": "Original downloaded photo unmodified"
+  },
+  {
+    "file": "references/auto-reference-Wasiul.jpg",
+    "author": "Wasiul Bahar",
+    "source": "https://commons.wikimedia.org/wiki/File:Auto_rickshaw_at_Hyderabad.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "retrieved": "2026-11-22",
+    "sha256": "95253c159a358be5de9423df5a6ff29f12262430aa707c755957cc2ddef00727",
+    "use": "Visual research/comparison only; no photograph pixels used as game textures",
+    "modification": "Original downloaded photo unmodified"
+  },
+  {
+    "file": "godot/assets/auto_rickshaw.glb",
+    "author": "Hyderabad Rise project contributors",
+    "source": "art/blender/build_assets.py",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "retrieved": "2026-11-22",
+    "sha256": "081802474ea8a078318c1f1b9a295f983050a6244127e0855d575a618620241d",
+    "use": "Original procedural geometry/atlas; conservative share-alike licensing for reference-informed art",
+    "modification": "New original mesh; no downloaded model used; atlas is deterministic original noise/palette"
+  },
+  {
+    "file": "godot/assets/auto_rickshaw_old_city_atlas.png",
+    "author": "Hyderabad Rise project contributors",
+    "source": "art/blender/build_assets.py",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "retrieved": "2026-11-22",
+    "sha256": "116b951005d6b7f60eae4786c2f474ca28c0bd74dbb86400f6cd06a1f3367fc0",
+    "use": "Original procedural geometry/atlas; conservative share-alike licensing for reference-informed art",
+    "modification": "New original mesh; no downloaded model used; atlas is deterministic original noise/palette"
+  },
+  {
+    "file": "godot/assets/charminar_lod0.glb",
+    "author": "Hyderabad Rise project contributors",
+    "source": "art/blender/build_assets.py",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "retrieved": "2026-11-22",
+    "sha256": "2230fe76958f1920a203e46ee057478d3d75d817678794b269f0392b57d1d068",
+    "use": "Original procedural geometry/atlas; conservative share-alike licensing for reference-informed art",
+    "modification": "New original mesh; no downloaded model used; atlas is deterministic original noise/palette"
+  },
+  {
+    "file": "godot/assets/charminar_lod0_old_city_atlas.png",
+    "author": "Hyderabad Rise project contributors",
+    "source": "art/blender/build_assets.py",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "retrieved": "2026-11-22",
+    "sha256": "116b951005d6b7f60eae4786c2f474ca28c0bd74dbb86400f6cd06a1f3367fc0",
+    "use": "Original procedural geometry/atlas; conservative share-alike licensing for reference-informed art",
+    "modification": "New original mesh; no downloaded model used; atlas is deterministic original noise/palette"
+  },
+  {
+    "file": "godot/assets/charminar_lod1.glb",
+    "author": "Hyderabad Rise project contributors",
+    "source": "art/blender/build_assets.py",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "retrieved": "2026-11-22",
+    "sha256": "d64f4a1616e926e495a308628de342097a7c1a778b3d7e5b5ea1e4a18505d37b",
+    "use": "Original procedural geometry/atlas; conservative share-alike licensing for reference-informed art",
+    "modification": "New original mesh; no downloaded model used; atlas is deterministic original noise/palette"
+  },
+  {
+    "file": "godot/assets/charminar_lod1_old_city_atlas.png",
+    "author": "Hyderabad Rise project contributors",
+    "source": "art/blender/build_assets.py",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "retrieved": "2026-11-22",
+    "sha256": "116b951005d6b7f60eae4786c2f474ca28c0bd74dbb86400f6cd06a1f3367fc0",
+    "use": "Original procedural geometry/atlas; conservative share-alike licensing for reference-informed art",
+    "modification": "New original mesh; no downloaded model used; atlas is deterministic original noise/palette"
+  },
+  {
+    "file": "godot/assets/charminar_lod2.glb",
+    "author": "Hyderabad Rise project contributors",
+    "source": "art/blender/build_assets.py",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "retrieved": "2026-11-22",
+    "sha256": "d2d9347d148be381aa13cccb43009d3b1afb4fd7c8af333ce97ee84f1634a846",
+    "use": "Original procedural geometry/atlas; conservative share-alike licensing for reference-informed art",
+    "modification": "New original mesh; no downloaded model used; atlas is deterministic original noise/palette"
+  },
+  {
+    "file": "godot/assets/charminar_lod2_old_city_atlas.png",
+    "author": "Hyderabad Rise project contributors",
+    "source": "art/blender/build_assets.py",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "retrieved": "2026-11-22",
+    "sha256": "116b951005d6b7f60eae4786c2f474ca28c0bd74dbb86400f6cd06a1f3367fc0",
+    "use": "Original procedural geometry/atlas; conservative share-alike licensing for reference-informed art",
+    "modification": "New original mesh; no downloaded model used; atlas is deterministic original noise/palette"
+  },
+  {
+    "file": "godot/assets/electrical_pole.glb",
+    "author": "Hyderabad Rise project contributors",
+    "source": "art/blender/build_assets.py",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "retrieved": "2026-11-22",
+    "sha256": "0fda99d86d36591444867de8b3b677513552301a1e6b2ed50981cfd35fb0d4fc",
+    "use": "Original procedural geometry/atlas; conservative share-alike licensing for reference-informed art",
+    "modification": "New original mesh; no downloaded model used; atlas is deterministic original noise/palette"
+  },
+  {
+    "file": "godot/assets/electrical_pole_old_city_atlas.png",
+    "author": "Hyderabad Rise project contributors",
+    "source": "art/blender/build_assets.py",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "retrieved": "2026-11-22",
+    "sha256": "116b951005d6b7f60eae4786c2f474ca28c0bd74dbb86400f6cd06a1f3367fc0",
+    "use": "Original procedural geometry/atlas; conservative share-alike licensing for reference-informed art",
+    "modification": "New original mesh; no downloaded model used; atlas is deterministic original noise/palette"
+  },
+  {
+    "file": "godot/assets/market_stall.glb",
+    "author": "Hyderabad Rise project contributors",
+    "source": "art/blender/build_assets.py",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "retrieved": "2026-11-22",
+    "sha256": "b854dc3ff18fcb5b9d16644c5f9b577fd30fcb3e6d6d54edaaaece93d5d7b419",
+    "use": "Original procedural geometry/atlas; conservative share-alike licensing for reference-informed art",
+    "modification": "New original mesh; no downloaded model used; atlas is deterministic original noise/palette"
+  },
+  {
+    "file": "godot/assets/market_stall_old_city_atlas.png",
+    "author": "Hyderabad Rise project contributors",
+    "source": "art/blender/build_assets.py",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "retrieved": "2026-11-22",
+    "sha256": "116b951005d6b7f60eae4786c2f474ca28c0bd74dbb86400f6cd06a1f3367fc0",
+    "use": "Original procedural geometry/atlas; conservative share-alike licensing for reference-informed art",
+    "modification": "New original mesh; no downloaded model used; atlas is deterministic original noise/palette"
+  },
+  {
+    "file": "godot/assets/neem_tree.glb",
+    "author": "Hyderabad Rise project contributors",
+    "source": "art/blender/build_assets.py",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "retrieved": "2026-11-22",
+    "sha256": "2975c3640d0d2b39fb951385f6f7772a581d153f2fd7322ea6a274ae14d8a40e",
+    "use": "Original procedural geometry/atlas; conservative share-alike licensing for reference-informed art",
+    "modification": "New original mesh; no downloaded model used; atlas is deterministic original noise/palette"
+  },
+  {
+    "file": "godot/assets/neem_tree_old_city_atlas.png",
+    "author": "Hyderabad Rise project contributors",
+    "source": "art/blender/build_assets.py",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "retrieved": "2026-11-22",
+    "sha256": "116b951005d6b7f60eae4786c2f474ca28c0bd74dbb86400f6cd06a1f3367fc0",
+    "use": "Original procedural geometry/atlas; conservative share-alike licensing for reference-informed art",
+    "modification": "New original mesh; no downloaded model used; atlas is deterministic original noise/palette"
+  },
+  {
+    "file": "godot/assets/old_city_atlas.png",
+    "author": "Hyderabad Rise project contributors",
+    "source": "art/blender/build_assets.py",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "retrieved": "2026-11-22",
+    "sha256": "116b951005d6b7f60eae4786c2f474ca28c0bd74dbb86400f6cd06a1f3367fc0",
+    "use": "Original procedural geometry/atlas; conservative share-alike licensing for reference-informed art",
+    "modification": "New original mesh; no downloaded model used; atlas is deterministic original noise/palette"
+  },
+  {
+    "file": "godot/assets/shop_lod0.glb",
+    "author": "Hyderabad Rise project contributors",
+    "source": "art/blender/build_assets.py",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "retrieved": "2026-11-22",
+    "sha256": "4f53b0a4a9f1b9b39d7eebe3ca2d1ade76a2c024238c943bc4869384f47330b5",
+    "use": "Original procedural geometry/atlas; conservative share-alike licensing for reference-informed art",
+    "modification": "New original mesh; no downloaded model used; atlas is deterministic original noise/palette"
+  },
+  {
+    "file": "godot/assets/shop_lod0_old_city_atlas.png",
+    "author": "Hyderabad Rise project contributors",
+    "source": "art/blender/build_assets.py",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "retrieved": "2026-11-22",
+    "sha256": "116b951005d6b7f60eae4786c2f474ca28c0bd74dbb86400f6cd06a1f3367fc0",
+    "use": "Original procedural geometry/atlas; conservative share-alike licensing for reference-informed art",
+    "modification": "New original mesh; no downloaded model used; atlas is deterministic original noise/palette"
+  },
+  {
+    "file": "godot/assets/shop_lod1.glb",
+    "author": "Hyderabad Rise project contributors",
+    "source": "art/blender/build_assets.py",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "retrieved": "2026-11-22",
+    "sha256": "eec571d7483af4b0a2e321c5386c8aa77a2bcd27b35f8341cc75b06d6e3555f1",
+    "use": "Original procedural geometry/atlas; conservative share-alike licensing for reference-informed art",
+    "modification": "New original mesh; no downloaded model used; atlas is deterministic original noise/palette"
+  },
+  {
+    "file": "godot/assets/shop_lod1_old_city_atlas.png",
+    "author": "Hyderabad Rise project contributors",
+    "source": "art/blender/build_assets.py",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "retrieved": "2026-11-22",
+    "sha256": "116b951005d6b7f60eae4786c2f474ca28c0bd74dbb86400f6cd06a1f3367fc0",
+    "use": "Original procedural geometry/atlas; conservative share-alike licensing for reference-informed art",
+    "modification": "New original mesh; no downloaded model used; atlas is deterministic original noise/palette"
+  },
+  {
+    "file": "godot/assets/street_lamp.glb",
+    "author": "Hyderabad Rise project contributors",
+    "source": "art/blender/build_assets.py",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "retrieved": "2026-11-22",
+    "sha256": "5dad12c98378057a99569ad879be1a72d9c89cdfb424dd4dede2471680c9caac",
+    "use": "Original procedural geometry/atlas; conservative share-alike licensing for reference-informed art",
+    "modification": "New original mesh; no downloaded model used; atlas is deterministic original noise/palette"
+  },
+  {
+    "file": "godot/assets/street_lamp_old_city_atlas.png",
+    "author": "Hyderabad Rise project contributors",
+    "source": "art/blender/build_assets.py",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "retrieved": "2026-11-22",
+    "sha256": "116b951005d6b7f60eae4786c2f474ca28c0bd74dbb86400f6cd06a1f3367fc0",
+    "use": "Original procedural geometry/atlas; conservative share-alike licensing for reference-informed art",
+    "modification": "New original mesh; no downloaded model used; atlas is deterministic original noise/palette"
+  },
+  {
+    "file": "godot/fonts/NotoSans-Regular.ttf",
+    "author": "Noto project / Google contributors",
+    "source": "System Debian fonts-noto-core package; https://github.com/notofonts",
+    "license": "SIL Open Font License 1.1",
+    "license_file": "godot/fonts/FONT-LICENSE.txt",
+    "sha256": "89c3c497f618fdaa0b2d1e98fef93582f28c71debd2c4a8cdf41f190ced2909d",
+    "modification": "Unmodified font"
+  },
+  {
+    "file": "godot/fonts/NotoNaskhArabic-Regular.ttf",
+    "author": "Noto project / Google contributors",
+    "source": "System Debian fonts-noto-core package; https://github.com/notofonts",
+    "license": "SIL Open Font License 1.1",
+    "license_file": "godot/fonts/FONT-LICENSE.txt",
+    "sha256": "8c67eaa2f0086872628fc3f7f760386f83c8be5c5e9a1ba3a38891237b2ac7cb",
+    "modification": "Unmodified font"
+  },
+  {
+    "file": "godot/fonts/NotoSansTelugu-Regular.ttf",
+    "author": "Noto project / Google contributors",
+    "source": "System Debian fonts-noto-core package; https://github.com/notofonts",
+    "license": "SIL Open Font License 1.1",
+    "license_file": "godot/fonts/FONT-LICENSE.txt",
+    "sha256": "cb3165071121b1e80c55a041d0c1f79b3bbc68e4b0eab37b0d881958dfc3ed7a",
+    "modification": "Unmodified font"
+  },
+  {
+    "file": "art/blender/Hyderabad_Original_Assets.blend",
+    "author": "Hyderabad Rise project contributors",
+    "source": "Original project authoring source",
+    "license": "CC BY-SA 4.0",
+    "sha256": "875ac0fc7fd50df14704e02461a45f0375252ab66728357d5be5f65d196583d4",
+    "modification": "Original procedural work; reference provenance listed in ASSET_CREDITS.txt"
+  },
+  {
+    "file": "art/blender/build_assets.py",
+    "author": "Hyderabad Rise project contributors",
+    "source": "Original project authoring source",
+    "license": "MIT",
+    "sha256": "a913519656ccb82058f826d667e44ff771ffe1e8794e89a84d4aff3563edccbe",
+    "modification": "Original procedural work; reference provenance listed in ASSET_CREDITS.txt"
+  }
+]

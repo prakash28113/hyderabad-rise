@@ -1,0 +1,62 @@
+[
+  {
+    "file": "charminar_lod0.glb",
+    "triangles": 38560,
+    "vertices": 76712,
+    "materials": 1
+  },
+  {
+    "file": "charminar_lod1.glb",
+    "triangles": 22672,
+    "vertices": 45032,
+    "materials": 1
+  },
+  {
+    "file": "charminar_lod2.glb",
+    "triangles": 10448,
+    "vertices": 20648,
+    "materials": 1
+  },
+  {
+    "file": "shop_lod0.glb",
+    "triangles": 434,
+    "vertices": 868,
+    "materials": 1
+  },
+  {
+    "file": "shop_lod1.glb",
+    "triangles": 218,
+    "vertices": 436,
+    "materials": 1
+  },
+  {
+    "file": "market_stall.glb",
+    "triangles": 206,
+    "vertices": 412,
+    "materials": 1
+  },
+  {
+    "file": "street_lamp.glb",
+    "triangles": 88,
+    "vertices": 176,
+    "materials": 1
+  },
+  {
+    "file": "electrical_pole.glb",
+    "triangles": 216,
+    "vertices": 432,
+    "materials": 1
+  },
+  {
+    "file": "neem_tree.glb",
+    "triangles": 240,
+    "vertices": 480,
+    "materials": 1
+  },
+  {
+    "file": "auto_rickshaw.glb",
+    "triangles": 458,
+    "vertices": 844,
+    "materials": 1
+  }
+]

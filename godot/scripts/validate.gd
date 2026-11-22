@@ -45,6 +45,13 @@ func run():
  touch.pressed = false
  world.player._input(touch)
  assert(world.player.stick == Vector2.ZERO and world.player.look_touch == 1)
+ var look := InputEventScreenDrag.new()
+ look.index = 1
+ look.relative = Vector2(0,-1000)
+ world.player._input(look)
+ world.player.update_camera()
+ assert(is_equal_approx(world.player.pitch,1.15))
+ assert(world.player.spring_arm.spring_length*sin(world.player.pitch)<=1.351)
  world.player._notification(Node.NOTIFICATION_APPLICATION_FOCUS_OUT)
  assert(world.player.move_touch == -1 and world.player.look_touch == -1)
  var samples: Array[float] = [1.0,2.0,3.0,100.0]

@@ -1,0 +1,1 @@
+BLOCKED: select one connected and authorized physical device with --serial; no test executed

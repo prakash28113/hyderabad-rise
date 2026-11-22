@@ -1,0 +1,9 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+HYD_STREAM {"features":276,"sync_update_ms":189.575,"tile_x":0,"tile_z":0,"tiles":9}
+HYD_READY {"platform":"Linux","scene_ready_ms":609.1,"scope":"scene setup only; excludes Android activity startup"}
+HYD_STREAM {"features":220,"sync_update_ms":19.814,"tile_x":1,"tile_z":1,"tiles":9}
+HYD_STREAM {"features":528,"sync_update_ms":91.996,"tile_x":-2,"tile_z":-2,"tiles":9}
+HYD_STREAM {"features":276,"sync_update_ms":49.411,"tile_x":0,"tile_z":0,"tiles":9}
+PASS: boundary/fall recovery, zeroed velocity, synthetic multitouch ownership/release/focus reset, percentile fixture
+PASS: scene load, three streaming transitions, nine-tile bound, reference counts

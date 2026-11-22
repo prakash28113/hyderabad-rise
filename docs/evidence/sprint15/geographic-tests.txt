@@ -1,0 +1,10 @@
+test_axes_and_scale (test_geo.GeoTests.test_axes_and_scale) ... ok
+test_negative_tile (test_geo.GeoTests.test_negative_tile) ... ok
+test_origin (test_geo.GeoTests.test_origin) ... ok
+test_source_connectivity (test_geo.GeoTests.test_source_connectivity) ... ok
+test_tile_coverage_and_identity (test_geo.GeoTests.test_tile_coverage_and_identity) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.047s
+
+OK

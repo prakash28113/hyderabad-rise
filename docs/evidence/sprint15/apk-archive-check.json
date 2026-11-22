@@ -1,0 +1,10 @@
+{
+  "arm64_library": true,
+  "tile_json_count": 76,
+  "anchor": true,
+  "signage": true,
+  "credits": true,
+  "font_license": true,
+  "noto_fonts": 3,
+  "imported_assets": 24
+}
