@@ -13,4 +13,11 @@ Do not expand districts until the Charminar scene has passed visual/authenticity
 Proposed Android budgets, not measurements: 30 FPS / 33.3 ms frame; CPU p95 <=25 ms, GPU p95 <=28 ms, no streaming stall >100 ms; process PSS <=600 MB, textures <=128 MB, visible triangles <=250k, draw calls <=180, 9 near tiles. Test 4 GB baseline Android device plus Pixel 9a and a midrange device. Run 15 minute walking route + repeated streaming boundaries offline and warm; capture Perfetto/Godot profiler, dumpsys meminfo, thermal state and p50/p95/p99 frame times. No physical device available in this workspace.
 
 ## Sprint 1.5 follow-up
-The ordered, current acceptance backlog is in [SPRINT15_REPORT.md](SPRINT15_REPORT.md#known-issues-and-ordered-backlog). Physical phone verification, authenticated branch delivery, streaming hitches, source completeness and measured architectural refinement precede Sprint 2 gameplay.
+The current delivery and verification status is in [CONTINUATION_REPORT.md](CONTINUATION_REPORT.md). Original Charminar LODs, local shop/prop prototypes, batching, boundary recovery and synthetic touch regressions are implemented; earlier numbered items describe the original plan. Remaining priority order:
+
+1. Approve uploading the development branch and original tag to the now-public existing repository. No force push, merge or release.
+2. Install matching Godot Android templates and SDK to export source containing the modal-input fix; verify signature, package, assets and offline permissions.
+3. Run physical Android install/offline play, multitouch, collision, background/resume, streamed traversal, frame-time, PSS and thermal checks. Sprint 1 remains unaccepted.
+4. Profile and budget synchronous tile mesh/collision work. Latest host transition samples include 67.390 ms and 50.123 ms; these are not phone measurements.
+5. Improve documented market frontage coverage, measured landmark detail and native-language sign review without moving source geometry.
+6. Start driving, traffic, pedestrians and delivery/wallet/save only after geographic, visual and device milestone acceptance.

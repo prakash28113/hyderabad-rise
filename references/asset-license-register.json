@@ -281,7 +281,8 @@
     "license": "SIL Open Font License 1.1",
     "license_file": "godot/fonts/FONT-LICENSE.txt",
     "sha256": "89c3c497f618fdaa0b2d1e98fef93582f28c71debd2c4a8cdf41f190ced2909d",
-    "modification": "Unmodified font"
+    "modification": "Unmodified font",
+    "license_url": "https://openfontlicense.org/open-font-license-official-text/"
   },
   {
     "file": "godot/fonts/NotoNaskhArabic-Regular.ttf",
@@ -290,7 +291,8 @@
     "license": "SIL Open Font License 1.1",
     "license_file": "godot/fonts/FONT-LICENSE.txt",
     "sha256": "8c67eaa2f0086872628fc3f7f760386f83c8be5c5e9a1ba3a38891237b2ac7cb",
-    "modification": "Unmodified font"
+    "modification": "Unmodified font",
+    "license_url": "https://openfontlicense.org/open-font-license-official-text/"
   },
   {
     "file": "godot/fonts/NotoSansTelugu-Regular.ttf",
@@ -299,7 +301,8 @@
     "license": "SIL Open Font License 1.1",
     "license_file": "godot/fonts/FONT-LICENSE.txt",
     "sha256": "cb3165071121b1e80c55a041d0c1f79b3bbc68e4b0eab37b0d881958dfc3ed7a",
-    "modification": "Unmodified font"
+    "modification": "Unmodified font",
+    "license_url": "https://openfontlicense.org/open-font-license-official-text/"
   },
   {
     "file": "art/blender/Hyderabad_Original_Assets.blend",
@@ -307,7 +310,8 @@
     "source": "Original project authoring source",
     "license": "CC BY-SA 4.0",
     "sha256": "875ac0fc7fd50df14704e02461a45f0375252ab66728357d5be5f65d196583d4",
-    "modification": "Original procedural work; reference provenance listed in ASSET_CREDITS.txt"
+    "modification": "Original procedural work; reference provenance listed in ASSET_CREDITS.txt",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
   },
   {
     "file": "art/blender/build_assets.py",
@@ -315,6 +319,7 @@
     "source": "Original project authoring source",
     "license": "MIT",
     "sha256": "a913519656ccb82058f826d667e44ff771ffe1e8794e89a84d4aff3563edccbe",
-    "modification": "Original procedural work; reference provenance listed in ASSET_CREDITS.txt"
+    "modification": "Original procedural work; reference provenance listed in ASSET_CREDITS.txt",
+    "license_url": "https://opensource.org/license/mit"
   }
 ]

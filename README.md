@@ -13,10 +13,13 @@ godot --headless --path godot --script res://scripts/validate.gd
 
 Debug APK: `build/hyderabad-v0.1.5-debug.apk` (separately supplied). Android 7.0+ ARM64; target SDK 36. Device install/launch remains untested.
 
-See docs/GEOGRAPHY.md, docs/QA.md, docs/LICENSE_REGISTER.md and docs/BACKLOG.md. Local branch: dev/sprint1-geographic-foundation. Existing private remote `prakash28113/hyderabad-rise` is approved; push is blocked by missing authenticated Git access. No merge, deployment or publishing performed.
+See docs/GEOGRAPHY.md, docs/QA.md, docs/LICENSE_REGISTER.md and docs/BACKLOG.md. Local branch: dev/sprint1-geographic-foundation. The existing remote `prakash28113/hyderabad-rise` is public and currently empty. Connected access reports push permission, but public upload awaits explicit approval following automatic review. No merge, deployment or publishing performed.
 
 ## Verification follow-up v0.1.1
 Local branch `dev/sprint1-verification-fixes` fixes mesh fronts/normals, adds boundary recovery, 30 FPS cap, scoped performance logs, a physical-device collection tool and rendered desktop screenshots. See `docs/VERIFICATION_FOLLOWUP.md`. Original commit preserved by ancestry and tag `sprint1-original-3659f13`. Physical Android verification and recognizable Hyderabad art remain incomplete.
 
 ## Sprint 1.5
 Original reference-informed Charminar LODs, Old City modules/props, a static auto-rickshaw, trilingual place-name signs, road/building batching and matched graphical evidence are included. See [Sprint 1.5 report](docs/SPRINT15_REPORT.md) for accuracy, licensing, actual desktop measurements and physical Android blockers. Full visual authenticity and the sustained Android 30 FPS milestone have not passed.
+
+## Current continuation
+See [current QA and delivery report](docs/CONTINUATION_REPORT.md). The source now prevents movement/camera input while Licenses is open and adds offline asset-integrity checks. These changes are **not in the recovered v0.1.5 APK**. Run `python3 tools/validate_bundle.py` and `python3 tools/validate_host.py` after the geographic tests. Host validation imports resources first and writes new logs under ignored `build/host-validation`, preserving historical evidence.

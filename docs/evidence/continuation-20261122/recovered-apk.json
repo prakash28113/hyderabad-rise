@@ -1,0 +1,9 @@
+{
+  "filename": "Hyderabad-Rise-v0.1.5-debug.apk",
+  "sha256": "bdb74c6fcac86e30b787fa17b3b46119f7b3de43a4f681d2e321f90f0e1ce6fd",
+  "size_bytes": 33989536,
+  "source_commit": "f43e01f689809ecdb8ac4aa3b26f94b571a2bcd8",
+  "status": "recovered previous build; does not contain continuation changes",
+  "new_export": "blocked: SDK and export templates missing",
+  "physical_device_tests": "not executed"
+}

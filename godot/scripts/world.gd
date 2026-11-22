@@ -59,6 +59,7 @@ func _ready():
  var canvas := CanvasLayer.new()
  add_child(canvas)
  status = Label.new()
+ status.mouse_filter = Control.MOUSE_FILTER_IGNORE
  status.position = Vector2(20,20)
  status.add_theme_font_size_override("font_size",20)
  canvas.add_child(status)
@@ -69,6 +70,7 @@ func _ready():
  footer.mouse_filter = Control.MOUSE_FILTER_IGNORE
  canvas.add_child(footer)
  var credit := Label.new()
+ credit.mouse_filter = Control.MOUSE_FILTER_IGNORE
  credit.text = "© OpenStreetMap contributors · ODbL 1.0
 https://www.openstreetmap.org/copyright
 Left drag: walk · Right drag: camera · Desktop: WASD + right mouse
@@ -89,7 +91,10 @@ OSM geometry prototype — heights, widths and terrain are placeholders"
  text.editable = false
  text.text = FileAccess.get_file_as_string("res://data/ASSET_CREDITS.txt") + "\n" + FileAccess.get_file_as_string("res://data/FONT-LICENSE.txt") + "\n" + "Map data © OpenStreetMap contributors, ODbL 1.0\nhttps://www.openstreetmap.org/copyright\nCorresponding geographic database is supplied with this prototype source package.\n\n" + FileAccess.get_file_as_string("res://data/ODbL-1.0.html") + "\n\n" + FileAccess.get_file_as_string("res://data/GODOT_LICENSE.txt") + "\n" + FileAccess.get_file_as_string("res://data/GODOT_COPYRIGHT.txt")
  panel.add_child(text)
- credits_button.pressed.connect(func(): panel.visible = not panel.visible)
+ credits_button.pressed.connect(func():
+  panel.visible = not panel.visible
+  player.set_controls_enabled(not panel.visible)
+ )
  old_city = OldCity.new()
  old_city.world = self
  add_child(old_city)

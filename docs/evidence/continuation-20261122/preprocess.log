@@ -1,0 +1,11 @@
+{
+  "origin": [
+    17.3616,
+    78.4747
+  ],
+  "axis": "x east, y up, z south",
+  "tile_size": 256,
+  "source_sha256": "710252a9b396c0229cfbb757a4edac7e839dd0e94099c7cdadc8ba2f18abdfd9",
+  "feature_count": 1434
+}
+tiles 76 landmarks 1

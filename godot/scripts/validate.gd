@@ -54,6 +54,25 @@ func run():
  assert(world.player.spring_arm.spring_length*sin(world.player.pitch)<=1.351)
  world.player._notification(Node.NOTIFICATION_APPLICATION_FOCUS_OUT)
  assert(world.player.move_touch == -1 and world.player.look_touch == -1)
+ # The license overlay must not steer the player or retain an active gesture.
+ world.player.velocity = Vector3(3,0,4)
+ world.player.set_controls_enabled(false)
+ var previous_yaw: float = world.player.yaw
+ touch.index = 0
+ touch.position = Vector2(20,200)
+ touch.pressed = true
+ world.player._input(touch)
+ world.player._input(drag)
+ world.player._input(look)
+ assert(world.player.stick == Vector2.ZERO)
+ assert(world.player.move_touch == -1 and world.player.look_touch == -1)
+ assert(world.player.velocity.x == 0 and world.player.velocity.z == 0)
+ assert(world.player.yaw == previous_yaw)
+ world.player.set_controls_enabled(true)
+ world.player._input(touch)
+ assert(world.player.move_touch == 0)
+ world.player.reset_controls()
+ print("PASS: modal input blocked, horizontal velocity reset, fresh touch accepted after close")
  var samples: Array[float] = [1.0,2.0,3.0,100.0]
  assert(is_equal_approx(world.percentile(samples,0.95),100.0))
  print("PASS: boundary/fall recovery, zeroed velocity, synthetic multitouch ownership/release/focus reset, percentile fixture")

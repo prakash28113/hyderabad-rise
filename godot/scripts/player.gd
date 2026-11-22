@@ -5,6 +5,7 @@ var stick := Vector2.ZERO
 var move_touch := -1
 var look_touch := -1
 var touch_origin := Vector2.ZERO
+var controls_enabled := true
 var pivot: Node3D
 var spring_arm: SpringArm3D
 func _ready():
@@ -38,6 +39,7 @@ func _ready():
  camera.current = true
  arm.add_child(camera)
 func _input(event):
+ if not controls_enabled: return
  if event is InputEventScreenTouch:
   if event.pressed:
    if event.position.x < get_viewport().get_visible_rect().size.x * 0.45 and move_touch == -1:
@@ -60,13 +62,21 @@ func _input(event):
   pitch = clamp(pitch-event.relative.y*0.004,-1.05,1.15)
 func _notification(what):
  if what == NOTIFICATION_APPLICATION_FOCUS_OUT:
-  stick = Vector2.ZERO
-  move_touch = -1
-  look_touch = -1
+  reset_controls()
+func reset_controls():
+ stick = Vector2.ZERO
+ move_touch = -1
+ look_touch = -1
+ velocity.x = 0.0
+ velocity.z = 0.0
+func set_controls_enabled(enabled: bool):
+ controls_enabled = enabled
+ reset_controls()
 func _physics_process(delta):
  var input := stick
- input.x += float(Input.is_physical_key_pressed(KEY_D))-float(Input.is_physical_key_pressed(KEY_A))
- input.y += float(Input.is_physical_key_pressed(KEY_S))-float(Input.is_physical_key_pressed(KEY_W))
+ if controls_enabled:
+  input.x += float(Input.is_physical_key_pressed(KEY_D))-float(Input.is_physical_key_pressed(KEY_A))
+  input.y += float(Input.is_physical_key_pressed(KEY_S))-float(Input.is_physical_key_pressed(KEY_W))
  var direction := Vector3(input.x,0,input.y).rotated(Vector3.UP,yaw).limit_length()
  velocity.x = direction.x*4.5
  velocity.z = direction.z*4.5
