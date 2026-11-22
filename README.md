@@ -11,7 +11,7 @@ python3 -m unittest discover -s tests -v
 godot --headless --path godot --script res://scripts/validate.gd
 ```
 
-Debug APK: `build/hyderabad-v0.1.6-debug.apk` (separately supplied). Android 7.0+ ARM64; target SDK 36. Device install/launch remains untested.
+Debug APK: `build/hyderabad-v0.1.7-debug.apk` (separately supplied). Android 7.0+ ARM64; target SDK 36. Device install/launch remains untested.
 
 See docs/GEOGRAPHY.md, docs/QA.md, docs/LICENSE_REGISTER.md and docs/BACKLOG.md. Development branch: `dev/sprint1-geographic-foundation` is now delivered to the existing public repository `prakash28113/hyderabad-rise`. The exact source history through `b37d082` and original tag `sprint1-original-3659f13` were imported successfully. See [GitHub delivery receipt](docs/GITHUB_DELIVERY.md) for verification. No game changes were merged into main; no release or deployment was published.
 
@@ -23,3 +23,6 @@ Original reference-informed Charminar LODs, Old City modules/props, a static aut
 
 ## Current continuation
 See [current QA and delivery report](docs/CONTINUATION_REPORT.md). The source now prevents movement/camera input while Licenses is open and adds offline asset-integrity checks. The newly built **v0.1.6 APK includes these changes**; it has a new debug signer, so an older installed prototype may need uninstalling first (clears app data). Run `python3 tools/validate_bundle.py` and `python3 tools/validate_host.py` after the geographic tests. Host validation imports resources first and writes new logs under ignored `build/host-validation`, preserving historical evidence.
+
+## Mobile follow-up v0.1.7
+Camera-obstructing avatar fade, visible touch controls, compact attribution, readable license modal and responsive aspect expansion are implemented. See [mobile QA report](docs/MOBILE_UX_REPORT.md) for exact source/APK identity and passed graphical CI. The new APK uses the same debug signer as v0.1.6. Phone verification, market density and Android performance acceptance remain open.
