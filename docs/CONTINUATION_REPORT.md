@@ -12,7 +12,7 @@ The map contains 509 OSM road ways and 925 building footprints in 76 registered 
 
 - Opening Licenses now disables walking and camera input and clears touch ownership, stick and horizontal velocity. Closing it requires a fresh gesture. Synthetic regression covers blocked drag, cleared velocity and resumed touch acquisition. Decorative HUD labels no longer intercept GUI input.
 - New offline `tools/validate_bundle.py` checks the raw source hash, exact registry/tile inventory, all registered asset hashes, art/font coverage and packaged attribution. Missing license URLs in five existing records were filled; asset bytes were unchanged.
-- Geographic CI now runs this integrity check with read-only repository permissions. The changed workflow has not run on GitHub.
+- Geographic CI now runs this integrity check with read-only repository permissions. A Godot job also installs the matching engine and runs the host regressions, retaining logs for seven days. The changed workflow has not run on GitHub; its engine download endpoint was reachable.
 - Host regression runner imports resources on fresh checkouts, detects engine/script errors and writes logs to a chosen directory instead of overwriting historical evidence.
 - Corrected stale geography, recovery, repository and backlog documentation. Historical reports remain historical records.
 
@@ -29,15 +29,20 @@ Host: Linux, Godot `4.7.2.stable.official.ed1daf0bf`. Evidence is in `docs/evide
 | Mesh regression | All 925 mapped building footprints passed normals/winding checks |
 | Scene regression | Three streaming transitions, nine-tile bound, reference counts, boundary/fall recovery, touch ownership/focus reset, camera limit and modal input checks passed |
 | Landmark regression | Source anchor/yaw, configured height, descending LOD triangles, building surface bound, 720 road endpoints, gateway/pier collision and prop LOD checks passed headlessly |
-| Android export | Attempted and failed: matching Android templates and Android SDK tools absent; Java export path unconfigured |
-| Physical Android | Not executed; no ADB/toolchain/device access available |
+| Android export | Initial attempt blocked; installed official matching templates, SDK platform/build-tools 36 and platform-tools, configured local Java 21; signed v0.1.6 export then succeeded |
+| APK package checks | Signature v2/v3 verified; ARM64, min SDK 24, target SDK 36, version code 4; all 76 tile files and packaged anchor/signage/notices match source bytes; no Internet permission |
+| Physical Android | ADB lists no attached devices; install/play/performance not executed |
 | GitHub Actions | Not executed; no remote branch uploaded |
 
 Scene-test synchronous streaming samples: startup 130.126 ms; transitions 13.864 / 67.390 / 50.123 ms. Scene setup 328.903 ms excludes engine/activity startup. These are single-run headless host samples, **not Android FPS, GPU times, PSS or a performance acceptance**. Two transitions exceed 33.33 ms; frame-budgeted streaming remains a priority. No new graphical performance claim is made.
 
 ## APK identity and limitation
 
-The recovered `Hyderabad-Rise-v0.1.5-debug.apk` is 33,989,536 bytes, SHA-256 `bdb74c6fcac86e30b787fa17b3b46119f7b3de43a4f681d2e321f90f0e1ce6fd`. Its bytes match the prior delivery. It corresponds to the recovered baseline, **not the new modal-input fix or continuation source**. Prior signature/permission checks are historical; signature verification was not rerun here because Android tools are absent. No phone install was performed. Do not label this APK as newly built.
+New build: `Hyderabad-Rise-v0.1.6-debug.apk`, 33,989,536 bytes, SHA-256 `dca7e501a1b4244159495a2a14b56e72a57eae3b1bc0f1c4aaaad1f1d5799afe`. Runtime source commit: `fdfd2144635f73682f3b1fa0f5ebf69d94e11fc3`. This build includes the modal-control fix. Version code 4; package `in.hyderabad.rise.prototype`; Android 7+ ARM64. Package validation is not proof of offline play or install success on a phone.
+
+Android signing verification passed v2/v3 with one development signer. Its certificate differs from v0.1.5. Updating an installed older prototype may require uninstalling it first, which clears its app data. No private key is bundled in the source archive. This is not production/release signing.
+
+The previous v0.1.5 build was also recovered and its recorded hash matched; it is superseded by the new deliverable. Initial failed-export evidence is retained as `android-export-blocked.log`; `android-export.log` records the later successful build. Package output, signature verification and `apk-verification.json` record the new build. Final documentation/evidence commits do not change runtime files from the recorded runtime source commit.
 
 ## GitHub delivery status
 
@@ -50,7 +55,7 @@ Approval needed: upload the development branch and original tag to this existing
 ## Remaining milestone work
 
 1. Approved GitHub branch delivery; no merge or release.
-2. Install matching Android templates/SDK and rebuild current source; verify package, signature, offline permissions and packaged map/notices.
+2. Keep the matching Android build configuration working; rerun package/signature/asset checks for each future code change. Current v0.1.6 export and package checks passed.
 3. Physical Android cold/warm launch, offline walking, multitouch/camera/collision, tile traversal, background/resume, 15-minute route, presented-frame timings, PSS and thermal measurements. Compare representative baseline/midrange hardware and Pixel 9a when available.
 4. Profile and distribute synchronous tile mesh/collider work across frames; measure residency/unload memory and visual seams on hardware.
 5. Validate market density, landmark details, junctions and multilingual signage with legally usable references and native-language review.

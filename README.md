@@ -11,7 +11,7 @@ python3 -m unittest discover -s tests -v
 godot --headless --path godot --script res://scripts/validate.gd
 ```
 
-Debug APK: `build/hyderabad-v0.1.5-debug.apk` (separately supplied). Android 7.0+ ARM64; target SDK 36. Device install/launch remains untested.
+Debug APK: `build/hyderabad-v0.1.6-debug.apk` (separately supplied). Android 7.0+ ARM64; target SDK 36. Device install/launch remains untested.
 
 See docs/GEOGRAPHY.md, docs/QA.md, docs/LICENSE_REGISTER.md and docs/BACKLOG.md. Local branch: dev/sprint1-geographic-foundation. The existing remote `prakash28113/hyderabad-rise` is public and currently empty. Connected access reports push permission, but public upload awaits explicit approval following automatic review. No merge, deployment or publishing performed.
 
@@ -22,4 +22,4 @@ Local branch `dev/sprint1-verification-fixes` fixes mesh fronts/normals, adds bo
 Original reference-informed Charminar LODs, Old City modules/props, a static auto-rickshaw, trilingual place-name signs, road/building batching and matched graphical evidence are included. See [Sprint 1.5 report](docs/SPRINT15_REPORT.md) for accuracy, licensing, actual desktop measurements and physical Android blockers. Full visual authenticity and the sustained Android 30 FPS milestone have not passed.
 
 ## Current continuation
-See [current QA and delivery report](docs/CONTINUATION_REPORT.md). The source now prevents movement/camera input while Licenses is open and adds offline asset-integrity checks. These changes are **not in the recovered v0.1.5 APK**. Run `python3 tools/validate_bundle.py` and `python3 tools/validate_host.py` after the geographic tests. Host validation imports resources first and writes new logs under ignored `build/host-validation`, preserving historical evidence.
+See [current QA and delivery report](docs/CONTINUATION_REPORT.md). The source now prevents movement/camera input while Licenses is open and adds offline asset-integrity checks. The newly built **v0.1.6 APK includes these changes**; it has a new debug signer, so an older installed prototype may need uninstalling first (clears app data). Run `python3 tools/validate_bundle.py` and `python3 tools/validate_host.py` after the geographic tests. Host validation imports resources first and writes new logs under ignored `build/host-validation`, preserving historical evidence.

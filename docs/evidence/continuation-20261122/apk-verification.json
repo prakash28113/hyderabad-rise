@@ -1,0 +1,22 @@
+{
+  "filename": "hyderabad-v0.1.6-debug.apk",
+  "sha256": "dca7e501a1b4244159495a2a14b56e72a57eae3b1bc0f1c4aaaad1f1d5799afe",
+  "size_bytes": 33989536,
+  "runtime_source_commit": "fdfd2144635f73682f3b1fa0f5ebf69d94e11fc3",
+  "version": "0.1.6",
+  "version_code": 4,
+  "package": "in.hyderabad.rise.prototype",
+  "min_sdk": 24,
+  "target_sdk": 36,
+  "abi": "arm64-v8a",
+  "verified_signature_schemes": [
+    "v2",
+    "v3"
+  ],
+  "tile_count": 76,
+  "map_bytes_match_source": true,
+  "internet_permission": false,
+  "physical_device_tests": "not executed",
+  "previous_debug_signer_matches": false,
+  "install_note": "Older debug prototype may require uninstall; this clears its app data."
+}

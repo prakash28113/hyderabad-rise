@@ -16,3 +16,8 @@ Last command has NOT been executed; no physical device is connected. Debug key i
 
 ## v0.1.1 follow-up
 Build-tools and platform 36 installed; final follow-up export uses build-tools 36.0.0 with target 36. Version code 2. See VERIFICATION_FOLLOWUP.md for actual scope, screenshots and physical collector instructions.
+
+## Current v0.1.6 continuation
+Godot 4.7.2 official matching Android templates, OpenJDK 21, SDK platform/build-tools 36 and platform-tools were installed in this workspace. Export succeeded after configuring local Editor Settings and creating `build/`. Export preset version code 4/name 0.1.6 targets Android 7+ ARM64. Run `mkdir -p build` before export; preset output is `../build/hyderabad-v0.1.6-debug.apk`. Verify with build-tools 36 `apksigner` and `aapt`. New signature v2/v3, package, all 76 tile bytes and packaged attribution checks passed. No Internet permission is present. See CONTINUATION_REPORT.md and its evidence directory.
+
+The new debug signer differs from v0.1.5; upgrading an installed older prototype can require uninstalling it (clears app data). Neither a phone installation nor physical performance test has run. No release key/store publication is configured. Host paths and private keys stay outside version control.

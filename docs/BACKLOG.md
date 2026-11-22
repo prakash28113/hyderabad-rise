@@ -16,7 +16,7 @@ Proposed Android budgets, not measurements: 30 FPS / 33.3 ms frame; CPU p95 <=25
 The current delivery and verification status is in [CONTINUATION_REPORT.md](CONTINUATION_REPORT.md). Original Charminar LODs, local shop/prop prototypes, batching, boundary recovery and synthetic touch regressions are implemented; earlier numbered items describe the original plan. Remaining priority order:
 
 1. Approve uploading the development branch and original tag to the now-public existing repository. No force push, merge or release.
-2. Install matching Godot Android templates and SDK to export source containing the modal-input fix; verify signature, package, assets and offline permissions.
+2. Keep v0.1.6 Android export reproducible. The control fix is in the new signed APK; signature, package, 76 map tiles and offline-permission checks passed. New debug signer differs from v0.1.5.
 3. Run physical Android install/offline play, multitouch, collision, background/resume, streamed traversal, frame-time, PSS and thermal checks. Sprint 1 remains unaccepted.
 4. Profile and budget synchronous tile mesh/collision work. Latest host transition samples include 67.390 ms and 50.123 ms; these are not phone measurements.
 5. Improve documented market frontage coverage, measured landmark detail and native-language sign review without moving source geometry.
