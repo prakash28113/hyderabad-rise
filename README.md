@@ -13,7 +13,7 @@ godot --headless --path godot --script res://scripts/validate.gd
 
 Debug APK: `build/hyderabad-v0.1.6-debug.apk` (separately supplied). Android 7.0+ ARM64; target SDK 36. Device install/launch remains untested.
 
-See docs/GEOGRAPHY.md, docs/QA.md, docs/LICENSE_REGISTER.md and docs/BACKLOG.md. Local branch: dev/sprint1-geographic-foundation. The existing remote `prakash28113/hyderabad-rise` is public and currently empty. Connected access reports push permission, but public upload awaits explicit approval following automatic review. No merge, deployment or publishing performed.
+See docs/GEOGRAPHY.md, docs/QA.md, docs/LICENSE_REGISTER.md and docs/BACKLOG.md. Development branch: `dev/sprint1-geographic-foundation` is now delivered to the existing public repository `prakash28113/hyderabad-rise`. The exact source history through `b37d082` and original tag `sprint1-original-3659f13` were imported successfully. See [GitHub delivery receipt](docs/GITHUB_DELIVERY.md) for verification. No game changes were merged into main; no release or deployment was published.
 
 ## Verification follow-up v0.1.1
 Local branch `dev/sprint1-verification-fixes` fixes mesh fronts/normals, adds boundary recovery, 30 FPS cap, scoped performance logs, a physical-device collection tool and rendered desktop screenshots. See `docs/VERIFICATION_FOLLOWUP.md`. Original commit preserved by ancestry and tag `sprint1-original-3659f13`. Physical Android verification and recognizable Hyderabad art remain incomplete.
