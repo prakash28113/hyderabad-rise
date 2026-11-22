@@ -11,4 +11,6 @@ python3 -m unittest discover -s tests -v
 godot --headless --path godot --script res://scripts/validate.gd
 ```
 
+Debug APK: `build/hyderabad-debug.apk` (separately supplied). Android 7.0+ ARM64; target SDK 36. Device install/launch remains untested.
+
 See docs/GEOGRAPHY.md, docs/QA.md, docs/LICENSE_REGISTER.md and docs/BACKLOG.md. Local branch: dev/sprint1-geographic-foundation. Remote creation/push pending owner/repository approval. No merge, deployment or publishing performed.

@@ -40,6 +40,21 @@ Left drag: walk · Right drag: camera · Desktop: WASD + right mouse
 OSM geometry prototype — heights, widths and terrain are placeholders"
  credit.position = Vector2(20,590)
  canvas.add_child(credit)
+ var credits_button := Button.new()
+ credits_button.text = "Licenses"
+ credits_button.position = Vector2(1120,20)
+ canvas.add_child(credits_button)
+ var panel := PanelContainer.new()
+ panel.position = Vector2(60,70)
+ panel.size = Vector2(1160,490)
+ panel.visible = false
+ canvas.add_child(panel)
+ var text := TextEdit.new()
+ text.custom_minimum_size = Vector2(1160,490)
+ text.editable = false
+ text.text = "Map data © OpenStreetMap contributors, ODbL 1.0\nhttps://www.openstreetmap.org/copyright\nCorresponding geographic database is supplied with this prototype source package.\n\n" + FileAccess.get_file_as_string("res://data/ODbL-1.0.html") + "\n\n" + FileAccess.get_file_as_string("res://data/GODOT_LICENSE.txt") + "\n" + FileAccess.get_file_as_string("res://data/GODOT_COPYRIGHT.txt")
+ panel.add_child(text)
+ credits_button.pressed.connect(func(): panel.visible = not panel.visible)
  update_stream()
 func box(parent: Node3D, pos: Vector3, size: Vector3, color: Color, collision: bool):
  var mesh := MeshInstance3D.new()
@@ -57,6 +72,16 @@ func add_feature(f: Dictionary):
  var root := Node3D.new()
  add_child(root)
  var points: Array = f.points
+ if f.tags.get("name","") == "Charminar":
+  var center := Vector2.ZERO
+  for pt in points: center += Vector2(pt[0],pt[1])
+  center /= points.size()
+  var marker := Label3D.new()
+  marker.text = "CHARMINAR\nOSM footprint · model pending"
+  marker.position = Vector3(center.x,12,center.y)
+  marker.billboard = BaseMaterial3D.BILLBOARD_ENABLED
+  marker.font_size = 64
+  root.add_child(marker)
  if f.kind == "road":
   var width := 5.0
   if f.tags.get("highway","") in ["footway","path","steps"]: width = 2.0

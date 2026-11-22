@@ -1,0 +1,10 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: scene load, three streaming transitions, nine-tile bound, reference counts
+ 
+{
+  "exit_code": 0,
+  "host_elapsed_s": 0.4055262560000301,
+  "host_peak_child_rss_kib": 91384,
+  "scope": "Linux headless process including scene setup and streaming tests; not frame times or Android PSS"
+}

@@ -1,7 +1,7 @@
 # Milestone gate and next sprint
 Do not expand districts until the Charminar scene has passed visual/authenticity review and physical Android profiling.
 
-1. Restore Android toolchain and matching export templates; export debug ARM64 APK and verify signature/package/offline permissions. Add pinned Godot import, smoke and Android artifact CI jobs once a remote exists. Current workflow validates geography only.
+1. Debug ARM64 APK and signature/package/permission checks are complete. Install on physical Android hardware and resolve any launch/runtime issues. Add pinned Godot import, smoke and Android artifact CI jobs once a remote exists. Current workflow validates geography only.
 2. Inspect visuals, controller, spawn collision and touch on a real device. Fix triangulation/winding, camera obstruction, terrain and study-edge recovery. Add regression tests for shared junction coordinates, tile seams and invalid polygons.
 3. Queue mesh work across frames; batch roads/buildings per tile using ArrayMesh/MultiMesh and simplified collision. Respect frame budget; track unload hysteresis and peak memory.
 4. In QGIS compare junctions and Charminar footprint to independently permitted reference. Record discrepancies and confidence. Preserve layer/bridge tags in future routing graph.
