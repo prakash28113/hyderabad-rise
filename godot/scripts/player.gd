@@ -8,6 +8,7 @@ var touch_origin := Vector2.ZERO
 var controls_enabled := true
 var pivot: Node3D
 var spring_arm: SpringArm3D
+var visual: MeshInstance3D
 func _ready():
  var capsule := CapsuleShape3D.new()
  capsule.radius = 0.35
@@ -22,6 +23,10 @@ func _ready():
  body.height = 1.8
  mesh.mesh = body
  mesh.position.y = 0.9
+ visual = mesh
+ var material := StandardMaterial3D.new()
+ material.albedo_color = Color("516f7a")
+ mesh.material_override = material
  add_child(mesh)
  pivot = Node3D.new()
  pivot.position.y = 1.6
@@ -45,7 +50,7 @@ func _input(event):
    if event.position.x < get_viewport().get_visible_rect().size.x * 0.45 and move_touch == -1:
     move_touch = event.index
     touch_origin = event.position
-   elif look_touch == -1:
+   elif event.position.x >= get_viewport().get_visible_rect().size.x * 0.45 and look_touch == -1:
     look_touch = event.index
   else:
    if event.index == move_touch:
@@ -89,3 +94,11 @@ func update_camera():
  pivot.rotation = Vector3(pitch,yaw,0)
  # Keep the third-person camera above the ground while looking up at tall landmarks.
  spring_arm.spring_length = minf(5.0,(pivot.position.y-0.25)/maxf(sin(pitch),0.001)) if pitch>0 else 5.0
+ # The ground-safe arm gets short when looking up. Fade the placeholder body
+ # rather than letting it cover the landmark (also covers wall-compressed arms).
+ var distance := spring_arm.get_hit_length()
+ if distance <= 0.0: distance = spring_arm.spring_length
+ distance = minf(distance,spring_arm.spring_length)
+ var fade := maxf(clampf((2.8-distance)/1.2,0.0,1.0),clampf((pitch-0.25)/0.35,0.0,1.0))
+ visual.transparency = fade
+ visual.visible = fade < 0.98

@@ -29,11 +29,25 @@ jobs:
           echo "$RUNNER_TEMP/hyderabad-godot" >> "$GITHUB_PATH"
       - run: godot --version
       - run: python3 tools/validate_host.py
+      - name: Render mobile HUD and camera regressions
+        run: |
+          if ! command -v xvfb-run >/dev/null; then
+            sudo apt-get update -qq
+            sudo apt-get install -y xvfb
+          fi
+          xvfb-run -a -s "-screen 0 1616x720x24" godot --path godot --resolution 1616x720 --script res://scripts/validate_mobile_visual.gd > build/host-validation/mobile-visual.log 2>&1
+          if grep -q 'ERROR:' build/host-validation/mobile-visual.log; then
+            cat build/host-validation/mobile-visual.log
+            exit 1
+          fi
+          grep 'PASS: graphical' build/host-validation/mobile-visual.log
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: godot-host-validation
-          path: build/host-validation/
+          path: |
+            build/host-validation/
+            build/mobile-visuals/
           retention-days: 7
 # Android export remains a separate, explicit operation with matching templates
 # and SDK. No deployment, release or store publishing is configured.

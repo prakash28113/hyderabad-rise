@@ -11,6 +11,7 @@ var loaded := {}
 var residents := {}
 var player: CharacterBody3D
 var status: Label
+var hud: Control
 var last_tile := Vector2i(999,999)
 var road_material := StandardMaterial3D.new()
 const SPAWN := Vector3(0,2,55)
@@ -58,43 +59,10 @@ func _ready():
  add_child(player)
  var canvas := CanvasLayer.new()
  add_child(canvas)
- status = Label.new()
- status.mouse_filter = Control.MOUSE_FILTER_IGNORE
- status.position = Vector2(20,20)
- status.add_theme_font_size_override("font_size",20)
- canvas.add_child(status)
- var footer := ColorRect.new()
- footer.color = Color(0.04,0.06,0.07,0.85)
- footer.position = Vector2(10,580)
- footer.size = Vector2(990,125)
- footer.mouse_filter = Control.MOUSE_FILTER_IGNORE
- canvas.add_child(footer)
- var credit := Label.new()
- credit.mouse_filter = Control.MOUSE_FILTER_IGNORE
- credit.text = "© OpenStreetMap contributors · ODbL 1.0
-https://www.openstreetmap.org/copyright
-Left drag: walk · Right drag: camera · Desktop: WASD + right mouse
-OSM geometry prototype — heights, widths and terrain are placeholders"
- credit.position = Vector2(20,590)
- canvas.add_child(credit)
- var credits_button := Button.new()
- credits_button.text = "Licenses"
- credits_button.position = Vector2(1120,20)
- canvas.add_child(credits_button)
- var panel := PanelContainer.new()
- panel.position = Vector2(60,70)
- panel.size = Vector2(1160,490)
- panel.visible = false
- canvas.add_child(panel)
- var text := TextEdit.new()
- text.custom_minimum_size = Vector2(1160,490)
- text.editable = false
- text.text = FileAccess.get_file_as_string("res://data/ASSET_CREDITS.txt") + "\n" + FileAccess.get_file_as_string("res://data/FONT-LICENSE.txt") + "\n" + "Map data © OpenStreetMap contributors, ODbL 1.0\nhttps://www.openstreetmap.org/copyright\nCorresponding geographic database is supplied with this prototype source package.\n\n" + FileAccess.get_file_as_string("res://data/ODbL-1.0.html") + "\n\n" + FileAccess.get_file_as_string("res://data/GODOT_LICENSE.txt") + "\n" + FileAccess.get_file_as_string("res://data/GODOT_COPYRIGHT.txt")
- panel.add_child(text)
- credits_button.pressed.connect(func():
-  panel.visible = not panel.visible
-  player.set_controls_enabled(not panel.visible)
- )
+ hud = preload("res://scripts/mobile_hud.gd").new()
+ hud.player = player
+ canvas.add_child(hud)
+ status = hud.status
  old_city = OldCity.new()
  old_city.world = self
  add_child(old_city)

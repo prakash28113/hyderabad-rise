@@ -52,6 +52,10 @@ func run():
  world.player.update_camera()
  assert(is_equal_approx(world.player.pitch,1.15))
  assert(world.player.spring_arm.spring_length*sin(world.player.pitch)<=1.351)
+ assert(not world.player.visual.visible,"High-pitch avatar must not obstruct the landmark")
+ world.player.pitch = -0.22
+ world.player.update_camera()
+ assert(world.player.visual.visible and world.player.visual.transparency==0.0)
  world.player._notification(Node.NOTIFICATION_APPLICATION_FOCUS_OUT)
  assert(world.player.move_touch == -1 and world.player.look_touch == -1)
  # The license overlay must not steer the player or retain an active gesture.
@@ -72,6 +76,22 @@ func run():
  world.player._input(touch)
  assert(world.player.move_touch == 0)
  world.player.reset_controls()
+ # Use the actual HUD buttons/modal instead of testing only the player setter.
+ world.hud.credits_button.pressed.emit()
+ assert(world.hud.panel.visible and not world.player.controls_enabled)
+ assert(world.player.move_touch == -1 and world.player.look_touch == -1)
+ world.hud.set_licenses_open(false)
+ assert(not world.hud.panel.visible and world.player.controls_enabled)
+ for width in [960,1280,1616]:
+  root.size = Vector2i(width,720)
+  await process_frame
+  world.hud.layout_hud()
+  var button_rect: Rect2 = world.hud.credits_button.get_rect()
+  assert(world.hud.safe_rect.encloses(button_rect))
+  var panel_rect: Rect2 = world.hud.panel.get_rect()
+  assert(world.hud.safe_rect.encloses(panel_rect))
+ assert(ProjectSettings.get_setting("display/window/stretch/aspect")=="expand")
+ print("PASS: upward-view avatar fade, normal-view restoration, actual license button, HUD bounds at 4:3/16:9/phone-wide")
  print("PASS: modal input blocked, horizontal velocity reset, fresh touch accepted after close")
  var samples: Array[float] = [1.0,2.0,3.0,100.0]
  assert(is_equal_approx(world.percentile(samples,0.95),100.0))
