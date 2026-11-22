@@ -23,6 +23,13 @@ func _ready():
  credits_button.add_theme_font_size_override("font_size",20)
  add_child(credits_button)
  panel = PanelContainer.new()
+ var backdrop := StyleBoxFlat.new()
+ backdrop.bg_color = Color("152731")
+ backdrop.content_margin_left = 12
+ backdrop.content_margin_right = 12
+ backdrop.content_margin_top = 12
+ backdrop.content_margin_bottom = 12
+ panel.add_theme_stylebox_override("panel",backdrop)
  panel.visible = false
  add_child(panel)
  var contents := VBoxContainer.new()
@@ -36,6 +43,8 @@ func _ready():
  text.editable = false
  text.size_flags_vertical = Control.SIZE_EXPAND_FILL
  text.add_theme_font_size_override("font_size",20)
+ text.add_theme_color_override("font_color",Color("e4edf2"))
+ text.add_theme_color_override("font_readonly_color",Color("e4edf2"))
  text.text = "Map data © OpenStreetMap contributors · ODbL 1.0\nhttps://www.openstreetmap.org/copyright\nSource database accompanies the project source. Heights, widths and terrain include documented estimates.\n\n"
  for file in ["ASSET_CREDITS.txt","FONT-LICENSE.txt","GODOT_LICENSE.txt","GODOT_COPYRIGHT.txt","ODbL-1.0.html"]:
   text.text += FileAccess.get_file_as_string("res://data/"+file)+"\n\n"
@@ -66,6 +75,7 @@ func set_licenses_open(open: bool):
  panel.visible = open
  player.set_controls_enabled(not open)
  credits_button.visible = not open
+ status.visible = not open
  queue_redraw()
 
 func _unhandled_key_input(event):

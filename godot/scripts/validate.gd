@@ -79,9 +79,11 @@ func run():
  # Use the actual HUD buttons/modal instead of testing only the player setter.
  world.hud.credits_button.pressed.emit()
  assert(world.hud.panel.visible and not world.player.controls_enabled)
+ assert(not world.hud.status.visible)
  assert(world.player.move_touch == -1 and world.player.look_touch == -1)
  world.hud.set_licenses_open(false)
  assert(not world.hud.panel.visible and world.player.controls_enabled)
+ assert(world.hud.status.visible)
  for width in [960,1280,1616]:
   root.size = Vector2i(width,720)
   await process_frame
