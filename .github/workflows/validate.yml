@@ -11,5 +11,29 @@ jobs:
       - run: python3 -m unittest discover -s tests -v
       - run: python3 tools/validate_bundle.py
       - run: git diff --exit-code -- godot/data data/charminar.geojson
-# Godot import/smoke and Android export must run with matching 4.7.2 templates,
-# JDK17 and SDK configured. No paid runners or automatic publishing configured.
+  godot:
+    needs: geography
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install matching Godot engine
+        env:
+          GODOT_VERSION: 4.7.2
+        run: |
+          mkdir -p "$RUNNER_TEMP/hyderabad-godot"
+          curl --fail --location --retry 3 "https://github.com/godotengine/godot-builds/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_linux.x86_64.zip" -o "$RUNNER_TEMP/godot.zip"
+          unzip -q "$RUNNER_TEMP/godot.zip" -d "$RUNNER_TEMP/hyderabad-godot"
+          mv "$RUNNER_TEMP/hyderabad-godot/Godot_v${GODOT_VERSION}-stable_linux.x86_64" "$RUNNER_TEMP/hyderabad-godot/godot"
+          chmod +x "$RUNNER_TEMP/hyderabad-godot/godot"
+          echo "$RUNNER_TEMP/hyderabad-godot" >> "$GITHUB_PATH"
+      - run: godot --version
+      - run: python3 tools/validate_host.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: godot-host-validation
+          path: build/host-validation/
+          retention-days: 7
+# Android export remains a separate, explicit operation with matching templates
+# and SDK. No deployment, release or store publishing is configured.
