@@ -1,0 +1,5 @@
+.godot/
+build/*
+!build/.gitkeep
+__pycache__/
+*.blend1
