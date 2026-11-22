@@ -1,0 +1,17 @@
+{
+  "bbox_wgs84": [
+    78.468,
+    17.355,
+    78.481,
+    17.367
+  ],
+  "min": [
+    -712.0982318785627,
+    -597.6479595706627
+  ],
+  "max": [
+    669.584904779894,
+    730.4320101553564
+  ],
+  "note": "Local AABB enclosing project study rectangle; not a surveyed playable boundary"
+}

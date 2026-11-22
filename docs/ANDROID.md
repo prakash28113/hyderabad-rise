@@ -13,3 +13,6 @@ aapt dump permissions build/hyderabad-debug.apk
 adb install -r build/hyderabad-debug.apk
 ```
 Last command has NOT been executed; no physical device is connected. Debug key is development-only. No store publication or production signing. Use APK hash and exact source commit when recording device QA. Do not publish until approval and milestone gate pass.
+
+## v0.1.1 follow-up
+Build-tools and platform 36 installed; final follow-up export uses build-tools 36.0.0 with target 36. Version code 2. See VERIFICATION_FOLLOWUP.md for actual scope, screenshots and physical collector instructions.

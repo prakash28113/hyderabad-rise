@@ -1,4 +1,5 @@
 extends Node3D
+const BuildingMesh = preload("res://scripts/building_mesh.gd")
 const Player = preload("res://scripts/player.gd")
 var registry: Dictionary
 var loaded := {}
@@ -7,8 +8,19 @@ var player: CharacterBody3D
 var status: Label
 var last_tile := Vector2i(999,999)
 var road_material := StandardMaterial3D.new()
+const SPAWN := Vector3(0,2,55)
+var study_bounds := Rect2()
+var boot_usec := Time.get_ticks_usec()
+var ready_msec := 0.0
+var streaming_msec := 0.0
+var last_frame_usec := 0
+var frame_samples: Array[float] = []
+var sample_elapsed := 0.0
+var recoveries := 0
 var building_material := StandardMaterial3D.new()
 func _ready():
+ var boundary: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://data/study_boundary.json"))
+ study_bounds = Rect2(Vector2(boundary.min[0],boundary.min[1]),Vector2(boundary.max[0]-boundary.min[0],boundary.max[1]-boundary.min[1]))
  registry = JSON.parse_string(FileAccess.get_file_as_string("res://data/registry.json"))
  road_material.albedo_color = Color("393b3b")
  building_material.albedo_color = Color("bd9d78")
@@ -25,7 +37,7 @@ func _ready():
  add_child(env)
  box(self,Vector3(0,-1,0),Vector3(2200,2,2200),Color("a89678"),true)
  player = Player.new()
- player.position = Vector3(0,2,55)
+ player.position = SPAWN
  add_child(player)
  var canvas := CanvasLayer.new()
  add_child(canvas)
@@ -56,6 +68,8 @@ OSM geometry prototype — heights, widths and terrain are placeholders"
  panel.add_child(text)
  credits_button.pressed.connect(func(): panel.visible = not panel.visible)
  update_stream()
+ ready_msec = (Time.get_ticks_usec()-boot_usec)/1000.0
+ print("HYD_READY ",JSON.stringify({"platform":OS.get_name(),"scene_ready_ms":ready_msec,"scope":"scene setup only; excludes Android activity startup"}))
 func box(parent: Node3D, pos: Vector3, size: Vector3, color: Color, collision: bool):
  var mesh := MeshInstance3D.new()
  var shape := BoxMesh.new()
@@ -98,26 +112,10 @@ func add_feature(f: Dictionary):
    mesh.position = (a+b)*0.5
    mesh.look_at(b,Vector3.UP)
  else:
-  var polygon := PackedVector2Array()
-  for pt in points: polygon.append(Vector2(pt[0],pt[1]))
-  if polygon.size()>1 and polygon[0].is_equal_approx(polygon[-1]): polygon.remove_at(polygon.size()-1)
-  if polygon.size()<3: return root
-  var triangles := Geometry2D.triangulate_polygon(polygon)
-  if triangles.is_empty(): return root
-  var surface := SurfaceTool.new()
-  surface.begin(Mesh.PRIMITIVE_TRIANGLES)
-  var height := 7.0 # Explicit visualization assumption, never a measured height.
-  for i in range(0,triangles.size(),3):
-   for j in [0,2,1]:
-    var pt := polygon[triangles[i+j]]
-    surface.add_vertex(Vector3(pt.x,height,pt.y))
-  for i in polygon.size():
-   var a := polygon[i]
-   var b := polygon[(i+1)%polygon.size()]
-   for v in [Vector3(a.x,0,a.y),Vector3(b.x,height,b.y),Vector3(b.x,0,b.y),Vector3(a.x,0,a.y),Vector3(a.x,height,a.y),Vector3(b.x,height,b.y)]: surface.add_vertex(v)
-  surface.generate_normals()
+  var building_mesh := BuildingMesh.build(points)
+  if building_mesh == null: return root
   var mesh := MeshInstance3D.new()
-  mesh.mesh = surface.commit()
+  mesh.mesh = building_mesh
   mesh.material_override = building_material
   root.add_child(mesh)
   mesh.create_trimesh_collision()
@@ -125,6 +123,7 @@ func add_feature(f: Dictionary):
 func update_stream():
  var center := Vector2i(floori(player.position.x/256),floori(player.position.z/256))
  if center == last_tile: return
+ var streaming_start := Time.get_ticks_usec()
  last_tile = center
  var wanted := {}
  for x in range(center.x-1,center.x+2):
@@ -148,8 +147,43 @@ func update_stream():
    if not residents.has(id): residents[id] = {"node":add_feature(f),"refs":0}
    residents[id].refs += 1
    loaded[key].append(id)
-func _process(_delta):
+ streaming_msec = (Time.get_ticks_usec()-streaming_start)/1000.0
+ print("HYD_STREAM ",JSON.stringify({"tile_x":center.x,"tile_z":center.y,"tiles":loaded.size(),"features":residents.size(),"sync_update_ms":streaming_msec}))
+func enforce_boundary():
+ var pos := Vector2(player.position.x,player.position.z)
+ if not study_bounds.has_point(pos) or player.position.y < -10.0:
+  player.position = SPAWN
+  player.velocity = Vector3.ZERO
+  recoveries += 1
+func percentile(sorted: Array[float], p: float) -> float:
+ if sorted.is_empty(): return 0.0
+ return sorted[clampi(ceili(p*sorted.size())-1,0,sorted.size()-1)]
+func record_frame(delta: float):
+ var now := Time.get_ticks_usec()
+ if last_frame_usec != 0: frame_samples.append((now-last_frame_usec)/1000.0)
+ last_frame_usec = now
+ sample_elapsed += delta
+ if sample_elapsed < 5.0: return
+ if frame_samples.is_empty(): return
+ frame_samples.sort()
+ print("HYD_PERF ",JSON.stringify({"platform":OS.get_name(),"display_driver":DisplayServer.get_name(),"samples":frame_samples.size(),"interval_ms_p50":percentile(frame_samples,0.50),"interval_ms_p95":percentile(frame_samples,0.95),"interval_ms_p99":percentile(frame_samples,0.99),"interval_ms_max":frame_samples[-1],"engine_fps":Engine.get_frames_per_second(),"engine_static_bytes":OS.get_static_memory_usage(),"scope":"engine process callback intervals and engine allocation counter; not presented-frame GPU timings or Android PSS"}))
+ frame_samples.clear()
+ sample_elapsed = 0.0
+func _notification(what):
+ if what == NOTIFICATION_APPLICATION_FOCUS_OUT or what == NOTIFICATION_APPLICATION_FOCUS_IN:
+  frame_samples.clear()
+  sample_elapsed = 0.0
+  last_frame_usec = 0
+func _process(delta):
+ enforce_boundary()
+ record_frame(delta)
  update_stream()
  status.text = "HYDERABAD: RISE OF AN EMPIRE
 CHARMINAR · Geographic foundation
-%d tiles · %d features · %d FPS (host only)" % [loaded.size(),residents.size(),Engine.get_frames_per_second()]
+%d tiles · %d features · %d engine FPS" % [loaded.size(),residents.size(),Engine.get_frames_per_second()]
+func _unhandled_key_input(event):
+ if event is InputEventKey and event.pressed and event.physical_keycode == KEY_F12 and OS.get_name() == "Linux":
+  await RenderingServer.frame_post_draw
+  var path := ProjectSettings.globalize_path("res://").path_join("../docs/evidence/fixes/desktop-capture.png").simplify_path()
+  var result := get_viewport().get_texture().get_image().save_png(path)
+  print("HYD_DESKTOP_CAPTURE ",result," ",path)
