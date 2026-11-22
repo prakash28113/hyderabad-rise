@@ -18,7 +18,7 @@ func run():
  for frame in 60: await process_frame
  assert(world.player.visual.visible)
  await capture("normal-camera",output)
- world.player.pitch = 1.15
+ world.player.pitch = 0.65
  world.player.update_camera()
  assert(not world.player.visual.visible)
  await capture("look-up-no-obstruction",output)
@@ -28,8 +28,10 @@ func run():
  world.hud.set_licenses_open(false)
  world.player.pitch = -0.22
  world.player.update_camera()
- assert(world.player.controls_enabled and world.player.visual.visible)
  root.size = Vector2i(1280,720)
  await capture("standard-landscape",output)
+ # SpringArm hit length updates on physics frames, so do not inspect the
+ # restored body in the same instant as changing the pitch.
+ assert(world.player.controls_enabled and world.player.visual.visible)
  print("PASS: graphical camera/HUD/license states captured from actual Godot rendering; desktop only, not Android acceptance")
  quit(0)

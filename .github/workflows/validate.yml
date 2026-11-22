@@ -36,7 +36,7 @@ jobs:
             sudo apt-get install -y xvfb
           fi
           set -o pipefail
-          timeout 90s xvfb-run -a -s "-screen 0 1616x720x24" godot --path godot --resolution 1616x720 --script res://scripts/validate_mobile_visual.gd 2>&1 | tee build/host-validation/mobile-visual.log
+          timeout 90s xvfb-run -a -s "-screen 0 1616x720x24" godot --audio-driver Dummy --path godot --resolution 1616x720 --script res://scripts/validate_mobile_visual.gd 2>&1 | tee build/host-validation/mobile-visual.log
           if grep -q 'ERROR:' build/host-validation/mobile-visual.log; then
             cat build/host-validation/mobile-visual.log
             exit 1
@@ -52,4 +52,3 @@ jobs:
           retention-days: 7
 # Android export remains a separate, explicit operation with matching templates
 # and SDK. No deployment, release or store publishing is configured.
-
